@@ -1,0 +1,146 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #fafafa;
+}
+
+section {
+  min-height: 100vh;
+  min-weight: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  padding: 3rem;
+}
+
+section .header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+section .header .heading-1 {
+  font-weight: 200;
+}
+
+section .header .heading-2 {
+  color: #4c4e61;
+}
+
+section .header p {
+  text-align: center;
+  font-size: 15px;
+  color: #a3a5ae;
+  width: 40%;
+  padding: 1rem 0;
+}
+
+section .card-grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  -ms-grid-rows: (1fr)[auto];
+      grid-template-rows: repeat(auto, 1fr);
+  gap: 2rem;
+}
+
+section .card-grid .card-1,
+section .card-grid .card-2,
+section .card-grid .card-3,
+section .card-grid .card-4 {
+  position: relative;
+  background-color: white;
+  border-radius: 10px;
+  border-top: 4px solid #45d3d3;
+  padding: 2rem;
+  margin-top: 2rem;
+  width: 100%;
+  -webkit-box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.274);
+          box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.274);
+}
+
+section .card-grid .card-1 h2,
+section .card-grid .card-2 h2,
+section .card-grid .card-3 h2,
+section .card-grid .card-4 h2 {
+  color: #4c4e61;
+}
+
+section .card-grid .card-1 p,
+section .card-grid .card-2 p,
+section .card-grid .card-3 p,
+section .card-grid .card-4 p {
+  color: #a3a5ae;
+}
+
+section .card-grid .image {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 2rem 0 0;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+}
+
+section .card-grid .card-1,
+section .card-grid .card-4,
+section .card-grid .center-card-grid {
+  place-self: center;
+  width: 100%;
+}
+
+section .card-grid .card-2 {
+  border-top: 4px solid #ea5353;
+}
+
+section .card-grid .card-3 {
+  border-top: 4px solid #fcaf4a;
+}
+
+section .card-grid .card-4 {
+  border-top: 4px solid #549ef2;
+}
+
+@media only screen and (max-width: 900px) {
+  section {
+    padding: 2rem;
+  }
+  section .header p {
+    width: 100% !important;
+  }
+  section .card-grid {
+    -ms-grid-columns: 1fr !important;
+        grid-template-columns: 1fr !important;
+    padding: 4rem 0;
+  }
+  section .card-grid .card-1,
+  section .card-grid .card-2,
+  section .card-grid card-3,
+  section .card-grid .card-4 {
+    margin: 0 !important;
+  }
+}
+/*# sourceMappingURL=style.css.map */
