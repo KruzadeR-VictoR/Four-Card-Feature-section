@@ -9,11 +9,12 @@
 
 body {
   background-color: #fafafa;
+  overflow-x: hidden;
 }
 
-section {
+main {
   min-height: 100vh;
-  min-weight: 100vw;
+  min-width: 100vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -24,7 +25,7 @@ section {
   padding: 3rem;
 }
 
-section .header {
+main .header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -40,15 +41,28 @@ section .header {
           align-items: center;
 }
 
-section .header .heading-1 {
+main .header .heading-1 {
   font-weight: 200;
+  color: #a3a5ae;
 }
 
-section .header .heading-2 {
+@media only screen and (max-width: 900px) {
+  main .header .heading-1 {
+    font-size: 1.5rem;
+  }
+}
+
+main .header .heading-2 {
   color: #4c4e61;
 }
 
-section .header p {
+@media only screen and (max-width: 900px) {
+  main .header .heading-2 {
+    font-size: 1.5rem;
+  }
+}
+
+main .header p {
   text-align: center;
   font-size: 15px;
   color: #a3a5ae;
@@ -56,7 +70,10 @@ section .header p {
   padding: 1rem 0;
 }
 
-section .card-grid {
+main .card-grid {
+  max-width: 80rem;
+  -ms-grid-row-align: center;
+      align-self: center;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[3];
@@ -66,10 +83,10 @@ section .card-grid {
   gap: 2rem;
 }
 
-section .card-grid .card-1,
-section .card-grid .card-2,
-section .card-grid .card-3,
-section .card-grid .card-4 {
+main .card-grid .card-1,
+main .card-grid .card-2,
+main .card-grid .card-3,
+main .card-grid .card-4 {
   position: relative;
   background-color: white;
   border-radius: 10px;
@@ -81,21 +98,21 @@ section .card-grid .card-4 {
           box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.274);
 }
 
-section .card-grid .card-1 h2,
-section .card-grid .card-2 h2,
-section .card-grid .card-3 h2,
-section .card-grid .card-4 h2 {
+main .card-grid .card-1 h2,
+main .card-grid .card-2 h2,
+main .card-grid .card-3 h2,
+main .card-grid .card-4 h2 {
   color: #4c4e61;
 }
 
-section .card-grid .card-1 p,
-section .card-grid .card-2 p,
-section .card-grid .card-3 p,
-section .card-grid .card-4 p {
+main .card-grid .card-1 p,
+main .card-grid .card-2 p,
+main .card-grid .card-3 p,
+main .card-grid .card-4 p {
   color: #a3a5ae;
 }
 
-section .card-grid .image {
+main .card-grid .image {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -105,41 +122,41 @@ section .card-grid .image {
           justify-content: end;
 }
 
-section .card-grid .card-1,
-section .card-grid .card-4,
-section .card-grid .center-card-grid {
+main .card-grid .card-1,
+main .card-grid .card-4,
+main .card-grid .center-card-grid {
   place-self: center;
   width: 100%;
 }
 
-section .card-grid .card-2 {
+main .card-grid .card-2 {
   border-top: 4px solid #ea5353;
 }
 
-section .card-grid .card-3 {
+main .card-grid .card-3 {
   border-top: 4px solid #fcaf4a;
 }
 
-section .card-grid .card-4 {
+main .card-grid .card-4 {
   border-top: 4px solid #549ef2;
 }
 
 @media only screen and (max-width: 900px) {
-  section {
+  main {
     padding: 2rem;
   }
-  section .header p {
+  main .header p {
     width: 100% !important;
   }
-  section .card-grid {
+  main .card-grid {
     -ms-grid-columns: 1fr !important;
         grid-template-columns: 1fr !important;
     padding: 4rem 0;
   }
-  section .card-grid .card-1,
-  section .card-grid .card-2,
-  section .card-grid card-3,
-  section .card-grid .card-4 {
+  main .card-grid .card-1,
+  main .card-grid .card-2,
+  main .card-grid card-3,
+  main .card-grid .card-4 {
     margin: 0 !important;
   }
 }

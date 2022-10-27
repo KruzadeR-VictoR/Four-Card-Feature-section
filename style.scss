@@ -19,12 +19,13 @@ $poppins: "Poppins", sans-serif;
 }
 body {
   background-color: $LightGray;
+  overflow-x: hidden;
 }
-section {
+main {
   min-height: 100vh;
-  min-weight: 100vw;
+  min-width: 100vw;
   display: flex;
-  flex-flow: column;
+  flex-flow: column;  
   padding: 3rem;
   .header {
     // background-color: pink;
@@ -33,10 +34,17 @@ section {
     justify-content: center;
     align-items: center;
     .heading-1 {
-      font-weight: 200;
+      font-weight: 200;      
+      color: hsl(229, 6%, 66%);
+      @media only screen and (max-width: 900px){
+        font-size: 1.5rem;
+      }
     }
     .heading-2 {
       color: $DarkBlue;
+      @media only screen and (max-width: 900px){
+        font-size: 1.5rem;
+      }
     }
     p {
       text-align: center;
@@ -48,6 +56,8 @@ section {
   }
   .card-grid {
     // background-color: teal;
+    max-width: 80rem;
+    align-self: center;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(auto, 1fr);
@@ -97,7 +107,7 @@ section {
 //| Mobile Responsive
 
 @media only screen and (max-width: 900px) {
-  section {
+  main {
     padding: 2rem;
     .header {
       p {
